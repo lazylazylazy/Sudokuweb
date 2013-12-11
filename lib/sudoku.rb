@@ -56,6 +56,19 @@ class Sudoku
     try_harder unless solved?
   end
 
+def boxes(rows)    
+    (0..BOX_SIZE-1).inject([]) do |boxes, i|
+      relevant_rows = rows.slice(BOX_SIZE * i, BOX_SIZE)
+      boxes + relevant_rows.transpose.each_slice(BOX_SIZE).map(&:flatten)       
+    end        
+  end
+
+def rows(cells)
+    (0..COLUMN_SIZE-1).inject([]) do |rows, index|
+      rows << cells.slice(index * COLUMN_SIZE, COLUMN_SIZE)
+    end
+  end
+
 private
 
   def replicate!
@@ -82,11 +95,7 @@ private
     end      
   end
 
-  def rows(cells)
-    (0..COLUMN_SIZE-1).inject([]) do |rows, index|
-      rows << cells.slice(index * COLUMN_SIZE, COLUMN_SIZE)
-    end
-  end
+  
 
   def columns(cells, rows)
     (0..COLUMN_SIZE-1).inject([]) do |cols, index|
@@ -94,12 +103,7 @@ private
     end
   end
 
-  def boxes(rows)    
-    (0..BOX_SIZE-1).inject([]) do |boxes, i|
-      relevant_rows = rows.slice(BOX_SIZE * i, BOX_SIZE)
-      boxes + relevant_rows.transpose.each_slice(BOX_SIZE).map(&:flatten)       
-    end        
-  end
+  
   
   def initialize_cells(digits)
     cells       = digits.split('').map {|v| Cell.new(v) }    

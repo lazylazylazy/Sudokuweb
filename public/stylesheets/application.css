@@ -3,16 +3,148 @@ div.box, div.cell {
 }
 
 .cell input {
-	width: 30px;
-	height: 30px;
+	width: 55px;
+	height: 60px;
+	background-color: yellow;
+	border-radius: 55px;
+	
+}
+
+
+.box {
+	border: 3px solid black;
+	
 }
 
 #sudoku {
 	font-size: 0;
 	text-align: center;
+	background-color: blue;
+	}
+
+body {
+  padding:0;margin:0;
+  background-image:
+url('http://static.tumblr.com/epkyugq/vxsmilpo3/paper.jpg');
+  overflow:hidden;
+}
+
+aside {
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  padding:1em;margin:auto;
+  background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, hsla(0,0%,0%,.5)), color-stop(100%, transparent));
+  display:block;
+  z-index:2;
+}
+
+content {
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  width:100%;height:100%;
+  padding:1em;margin:auto;
+  animation:anima 10s linear infinite;
+  -o-animation:anima 10s linear infinite;
+  -moz-animation:anima 10s linear infinite;
+  -webkit-animation:anima 10s linear infinite;
+  background-image:linear-gradient(0deg,transparent,hsla(0,0%,0%,.8) 100%);
+  display:block;
+  z-index:1;
+}
+
+@keyframes anima {
+  0% {background-color:hsla(0,100%,50%,.6);}
+  10% {background-color:hsla(50,100%,50%,.6);}
+  20% {background-color:hsla(100,100%,50%,.6);}
+  30% {background-color:hsla(150,100%,50%,.6);}
+  40% {background-color:hsla(200,100%,50%,.6);}
+  50% {background-color:hsla(250,100%,50%,.6);}
+  60% {background-color:hsla(200,100%,50%,.6);}
+  70% {background-color:hsla(150,100%,50%,.6);}
+  80% {background-color:hsla(100,100%,50%,.6);}
+  90% {background-color:hsla(50,100%,50%,.6);}
+  100% {background-color:hsla(0,100%,50%,.6);}
+}
+@-o-keyframes anima {
+  0% {background-color:hsla(0,100%,50%,.6);}
+  10% {background-color:hsla(50,100%,50%,.6);}
+  20% {background-color:hsla(100,100%,50%,.6);}
+  30% {background-color:hsla(150,100%,50%,.6);}
+  40% {background-color:hsla(200,100%,50%,.6);}
+  50% {background-color:hsla(250,100%,50%,.6);}
+  60% {background-color:hsla(200,100%,50%,.6);}
+  70% {background-color:hsla(150,100%,50%,.6);}
+  80% {background-color:hsla(100,100%,50%,.6);}
+  90% {background-color:hsla(50,100%,50%,.6);}
+  100% {background-color:hsla(0,100%,50%,.6);}
+}
+@-moz-keyframes anima {
+  0% {background-color:hsla(0,100%,50%,.6);}
+  10% {background-color:hsla(50,100%,50%,.6);}
+  20% {background-color:hsla(100,100%,50%,.6);}
+  30% {background-color:hsla(150,100%,50%,.6);}
+  40% {background-color:hsla(200,100%,50%,.6);}
+  50% {background-color:hsla(250,100%,50%,.6);}
+  60% {background-color:hsla(200,100%,50%,.6);}
+  70% {background-color:hsla(150,100%,50%,.6);}
+  80% {background-color:hsla(100,100%,50%,.6);}
+  90% {background-color:hsla(50,100%,50%,.6);}
+  100% {background-color:hsla(0,100%,50%,.6);}
+}
+@-webkit-keyframes anima {
+  0% {background-color:hsla(0,100%,50%,.6);}
+  10% {background-color:hsla(50,100%,50%,.6);}
+  20% {background-color:hsla(100,100%,50%,.6);}
+  30% {background-color:hsla(150,100%,50%,.6);}
+  40% {background-color:hsla(200,100%,50%,.6);}
+  50% {background-color:hsla(250,100%,50%,.6);}
+  60% {background-color:hsla(200,100%,50%,.6);}
+  70% {background-color:hsla(150,100%,50%,.6);}
+  80% {background-color:hsla(100,100%,50%,.6);}
+  90% {background-color:hsla(50,100%,50%,.6);}
+  100% {background-color:hsla(0,100%,50%,.6);}
 }
 
 body {
+	font-size: 30;
 	text-align: center;
-	font-family: Arial;
+	font-family: Comic Sans MS;
 }
+
+.box {
+    border-style: solid black;
+    border-width: 5px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: #99FF33;
+    -webkit-transition:width 1s, height 1s, background-color 0.5s, -webkit-transform 1s;
+  	
+}
+.box:hover {
+    background-color: #FF3366;
+    width:200px;
+    height:200px;
+    -webkit-transform:rotate(1070deg);
+    
+}
+
+
+.cell {
+-webkit-animation: cssAnimation 1.2306s 20 ease-in-out infinite;
+-moz-animation: cssAnimation 1.2306s 20 ease-in-out infinite; 
+-o-animation: cssAnimation 1.2306s 20 ease-in-out infinite;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -webkit-transform: rotate(1deg) scale(1) skew(-80deg) translate(259px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -moz-transform: rotate(1deg) scale(1) skew(-80deg) translate(259px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -o-transform: rotate(1deg) scale(1) skew(-80deg) translate(259px); }
+}
+
