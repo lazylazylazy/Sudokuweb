@@ -10,10 +10,17 @@ div.box, div.cell {
 	
 }
 
+input.incorrect {
+	background-color: red;
+}
+
+.value-provided {
+	background-color: #DDD;
+}
 
 .box {
 	border: 3px solid black;
-	
+
 }
 
 #sudoku {
@@ -21,15 +28,15 @@ div.box, div.cell {
 	text-align: center;
 	background-color: blue;
 	}
-
+/*
 body {
   padding:0;margin:0;
   background-image:
 url('http://static.tumblr.com/epkyugq/vxsmilpo3/paper.jpg');
   overflow:hidden;
-}
+}*/
 
-aside {
+/*aside {
   position:absolute;
   top:0;left:0;right:0;bottom:0;
   padding:1em;margin:auto;
@@ -103,7 +110,7 @@ content {
   80% {background-color:hsla(100,100%,50%,.6);}
   90% {background-color:hsla(50,100%,50%,.6);}
   100% {background-color:hsla(0,100%,50%,.6);}
-}
+}*/
 
 body {
 	font-size: 30;
@@ -125,12 +132,12 @@ body {
     background-color: #FF3366;
     width:200px;
     height:200px;
-    -webkit-transform:rotate(1070deg);
+    -webkit-transform:rotate(1440deg);
     
 }
 
 
-.cell {
+/*.cell {
 -webkit-animation: cssAnimation 1.2306s 20 ease-in-out infinite;
 -moz-animation: cssAnimation 1.2306s 20 ease-in-out infinite; 
 -o-animation: cssAnimation 1.2306s 20 ease-in-out infinite;
@@ -146,5 +153,5 @@ to { -moz-transform: rotate(1deg) scale(1) skew(-80deg) translate(259px); }
 @-o-keyframes cssAnimation {
 from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
 to { -o-transform: rotate(1deg) scale(1) skew(-80deg) translate(259px); }
-}
+}*/
 
