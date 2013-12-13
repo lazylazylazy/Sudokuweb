@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    newrelic_rpm (3.7.0.177)
     rack (1.5.2)
     rack-flash3 (1.0.5)
       rack
@@ -21,7 +20,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  newrelic_rpm
   rack-flash3
   shotgun
   sinatra

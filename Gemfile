@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-Ruby "2.0.0"
-
 gem 'sinatra'
 gem 'shotgun'
 gem 'sinatra-partial'
