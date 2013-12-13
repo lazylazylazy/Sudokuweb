@@ -10,6 +10,11 @@ div.box, div.cell {
 	
 }
 
+#flash {
+  margin: 20px;
+  background-color: green;
+}
+
 input.incorrect {
 	background-color: red;
 }
@@ -28,13 +33,13 @@ input.incorrect {
 	text-align: center;
 	background-color: blue;
 	}
-/*
+
 body {
   padding:0;margin:0;
   background-image:
 url('http://static.tumblr.com/epkyugq/vxsmilpo3/paper.jpg');
   overflow:hidden;
-}*/
+}
 
 /*aside {
   position:absolute;
