@@ -1,8 +1,10 @@
 require 'sinatra'
+require 'sinatra/partial'
 require_relative './lib/sudoku'
 require_relative './lib/cell'
 require_relative './lib/helper'
 
+set :partial_template_engine, :erb
 enable :sessions
 
 def random_sudoku
@@ -67,6 +69,15 @@ get '/solution' do
 	@solution = session[:solution]
   @puzzle = session[:puzzle]
 	erb :index
+end
+
+post '/new-game' do
+	session[:current_solution] = nil
+	generate_new_puzzle_if_necessary
+	redirect to '/'
+	# reset the session
+	# generate new puzzle
+	# redirect to the homepage (using a get request)
 end
 
 post '/' do
